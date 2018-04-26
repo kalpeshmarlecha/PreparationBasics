@@ -1,0 +1,119 @@
+package com.ebay.quality.vrfn.vps.c2c.autosellreg.e2e;
+
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Map;
+
+/*
+Write a function called answer(data, n) that takes in a list of less than 100 integers and a number n, and returns that same list but with all of the numbers that occur more than n times removed entirely. The returned list should retain the same ordering as the original list - you don't want to mix up those carefully-planned shift rotations! For instance, if data was [5, 10, 15, 10, 7] and n was 1, answer(data, n) would return the list [5, 15, 7] because 10 occurs twice, and thus was removed from the list entirely.
+ 
+Languages
+=========
+ 
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+ 
+Test cases
+==========
+ 
+Inputs:
+    (int list) data = [1, 2, 3]
+    (int) n = 0
+Output:
+    (int list) []
+ 
+Inputs:
+    (int list) data = [1, 2, 2, 3, 3, 3, 4, 5, 5]
+    (int) n = 1
+Output:
+    (int list) [1, 4]
+ 
+Inputs:
+    (int list) data = [1, 2, 3]
+    (int) n = 6
+Output:
+    (int list) [1, 2, 3]
+*/
+
+public class Solution {
+	
+	public ArrayList<Integer> getResult(ArrayList<Integer> list, int number){
+		Map<Integer, Integer> frequencyMap = getFrequencyMap(list);
+		System.out.println("MAP Contents: " + frequencyMap.toString());
+		return filterResults(list, frequencyMap, number);
+	}
+
+	private ArrayList<Integer> filterResults(ArrayList<Integer> list,
+			Map<Integer, Integer> frequencyMap, int number) {
+		
+		ArrayList<Integer> solList = new ArrayList<Integer>();
+		for(int i=0; i<list.size(); i++){
+			int element = list.get(i);
+			
+			if(frequencyMap.containsKey(element)){
+				int countInMap = frequencyMap.get(element);
+				if(countInMap <= number){
+					solList.add(element);
+				}
+			}
+		}
+		return solList;
+	}
+
+	private Map<Integer, Integer> getFrequencyMap(ArrayList<Integer> list) {
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
+		for(int element : list){
+			if(map.containsKey(element)){
+				int count = map.get(element);
+				map.put(element, count+1);
+			}else{
+				map.put(element, 1);
+			}
+		}
+		return map;
+	}
+
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<Integer> solList = null;
+		int number = 1;
+		list.add(1);
+		list.add(2); list.add(2);
+		list.add(3); list.add(3); list.add(3);
+		list.add(4);
+		list.add(5); list.add(5);
+		solList = sol.getResult(list, number);
+		System.out.println("SOLUTION : " + solList.toString());
+
+		list.clear();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		number = 0;
+		solList = sol.getResult(list, number);
+		System.out.println("SOLUTION : " + solList.toString());
+		
+		list.clear();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		number = 6;
+		solList = sol.getResult(list, number);
+		System.out.println("SOLUTION : " + solList.toString());
+
+		list.clear();
+		list.add(5);
+		list.add(10);
+		list.add(15);
+		list.add(10);
+		list.add(7);
+		number = 1;
+		solList = sol.getResult(list, number);
+		System.out.println("SOLUTION : " + solList.toString());
+		
+	}
+
+}
