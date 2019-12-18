@@ -1,155 +1,107 @@
-package com.ebay.kyc.admintool.controller;
+package com.ebay.crm.kycriskrtr;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+//Iterative Queue based Java program to do level order traversal 
+//of Binary Tree 
 
-public class LevelOrder {
-	static class Node {
-		int data;
-		Node left;
-		Node right;
+/* importing the inbuilt java classes required for the program */
+import java.util.Queue; 
+import java.util.LinkedList; 
 
-		Node(int data) {
-			this.data = data;
-			left = null;
-			right = null;
-		}
-	}
+/* Class to represent Tree node */
+class Node123 { 
+	int data; 
+	Node123 left, right, next; 
 
-	static void printLevelOrderSpiral(Node root) {
-	    Stack<Node> stack1 = new Stack<Node>();
-	    Stack<Node> stack2 = new Stack<Node>();
-	    stack1.push(root); 
-	    boolean isItFirstStack = true;
-	                                                            
-	    while(!stack1.isEmpty() || !stack2.isEmpty()) {
-	         if(isItFirstStack) {
-	             Node currentNode = stack1.pop();
-	             System.out.print(currentNode.data + " ");
-	             if(currentNode.left != null) {
-	                 stack2.push(currentNode.left);
-	             }
-	             
-	             if(currentNode.right != null) {
-	                 stack2.push(currentNode.right);
-	             }
-	             
-	             if(stack1.isEmpty()) {
-	            	 isItFirstStack = false;
-	             	System.out.println();
-	             }             
-	            
-	         } else { 
-	            
-	             Node currentNode = stack2.pop();
-	             System.out.print(currentNode.data + " ");
-	             if(currentNode.right != null) {
-	                 stack1.add(currentNode.right);
-	             }
-	             
-	             if(currentNode.left != null) {
-	                 stack1.add(currentNode.left);
-	             }
-	             
-	             if(stack2.isEmpty()) {
-	                isItFirstStack = true;
-	                System.out.println();
-	             }           
-	               
-	         }
-	    }
-		
-	}
+	public Node123(int item) { 
+		data = item; 
+		left = null; 
+		right = null; 
+		next = null;
+	} 
+} 
+
+/* Class to print Level Order Traversal */
+public class LevelOrder { 
+
+	Node123 root; 
+
+	/* Given a binary tree. Print its nodes in level order 
+	using array for implementing queue */
+	void printLevelOrder() 
+	{ 
+		Queue<Node123> queue = new LinkedList<Node123>(); 
+		queue.add(root); 
+		while (!queue.isEmpty()) 
+		{ 
+			int size = queue.size();
+			/* poll() removes the present head. 
+			For more information on poll() visit 
+			http://www.tutorialspoint.com/java/util/linkedlist_poll.htm */
+			while (size > 0) {
+				Node123 tempNode = queue.poll(); 
+				System.out.print(tempNode.data + " "); 
 	
-	// Iterative method to do level order traversal line by line
-	static void printLevelOrder(Node root) {
-		if (root == null) {
-			return;
-
-		}
-
-		Queue<Node> queue1 = new LinkedList<>();
-		Queue<Node> queue2 = new LinkedList<>();
-		queue1.add(root);
-		boolean isItFirstQueue = true;
-
-		while (!queue1.isEmpty() || !queue2.isEmpty()) {
-			if (isItFirstQueue) {
-				Node currentNode = queue1.poll();
-				System.out.print(currentNode.data + " ");
-				if (currentNode.left != null) {
-					queue2.add(currentNode.left);
-				}
-
-				if (currentNode.right != null) {
-					queue2.add(currentNode.right);
-				}
-
-				if (queue1.isEmpty()) {
-					isItFirstQueue = false;
-					System.out.println();
-				}
-
-			} else {
-
-				Node currentNode = queue2.poll();
-				System.out.print(currentNode.data + " ");
-				if (currentNode.left != null) {
-					queue1.add(currentNode.left);
-				}
-
-				if (currentNode.right != null) {
-					queue1.add(currentNode.right);
-				}
-
-				if (queue2.isEmpty()) {
-					isItFirstQueue = true;
-					System.out.println();
-				}
-
+				/*Enqueue left child */
+				if (tempNode.left != null) { 
+					queue.add(tempNode.left); 
+				} 
+	
+				/*Enqueue right child */
+				if (tempNode.right != null) { 
+					queue.add(tempNode.right); 
+				} 
+				size--;
 			}
-
-		}
-
-	}
-
-	// Driver program to test above functions
-	public static void main(String[] args) {
-
-        // Let us create binary tree shown in above diagram 
-       /*               1 
-                   /     \ 
-                  2       3 
-                /   \       \ 
-               4     5       6 
-              / \   / \     / \
-             7   8 9   10  11  12
-       */
+			System.out.println();
+		} 
+	} 
+	
+	public Node123 connect(Node123 root) {
+        if (root == null) return null; 
+        Queue<Node123> q = new LinkedList<Node123>();
+        q.add(root);
+        root.next = null;
         
-        // Output:
-        // 1
-        // 2 3
-        // 4 5 6
-        // 7 8 9 10 11 12
-		
-		Node root = new Node(1);
-		root.left = new Node(2);
-		root.right = new Node(3);
-		root.left.left = new Node(4);
-		root.left.right = new Node(5);
-		root.right.right = new Node(6);
+        LinkedList<Node123> levelList = new LinkedList<Node123>();
+        while (!q.isEmpty()) {
+            int size = q.size();
+            while (size > 0) {
+            	Node123 node = q.poll();
+                if (node.left != null) {
+                    q.add(node.left);
+                    levelList.add(node.left);
+                }
+                if (node.right != null) {
+                    q.add(node.right);
+                    levelList.add(node.right);
+                }
+                node.next = levelList.pollFirst();
+                if (size == 1) {
+                	node.next = null;
+                }
+                size--;
+            }
+        }
+        return root;
+    }
 
-		root.left.left.left = new Node(7);
-		root.left.left.right = new Node(8);
-		root.left.right.left = new Node(9);
-		root.left.right.right = new Node(10);
-		root.right.right.left = new Node(11);
-		root.right.right.right = new Node(12);
+	public static void main(String args[]) 
+	{ 
+		/* creating a binary tree and entering 
+		the nodes */
+		LevelOrder tree_level = new LevelOrder(); 
+		tree_level.root = new Node123(1); 
+		tree_level.root.left = new Node123(2); 
+		tree_level.root.right = new Node123(3); 
+		tree_level.root.left.left = new Node123(4); 
+		tree_level.root.left.right = new Node123(5); 
+		tree_level.root.right.left = new Node123(6); 
+		tree_level.root.right.right = new Node123(7); 
 
-		//printLevelOrder(root);
-		printLevelOrderSpiral(root);
-
-	}
-
-}
+		System.out.println("Level order traversal of binary tree is - "); 
+		// tree_level.printLevelOrder(); 
+		Node123 newRoot = tree_level.connect(tree_level.root); 
+		tree_level.root = newRoot;
+		tree_level.printLevelOrder(); 
+	} 
+} 

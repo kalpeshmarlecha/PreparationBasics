@@ -1,76 +1,62 @@
-package com.paypal.risk.riskonboardingmsgd.services;
+package com.ebay.crm.kycriskrtr;
 
 public class QuickSort {
 
-	int arr[] = { 5, 3, 2, 4, 1, 6, 8 };
-
-	public void printArr() {
-		for (int i = 0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+	public static void main(String[] args) {
+		QuickSort qs = new QuickSort();
+		int[] arr = {3, 5, 1, 6, 98, 4, 8, 9, 2};
+		qs.sort(arr, 0, arr.length-1);
+		
+		for (int i: arr) {
+			System.out.print(i + ", ");
+		}
 		System.out.println();
+		
+		
+		int arrNew[] = {3, 5, 1, 6, 98, 4, 8, 9, 2};
+		int sol = qs.quickSelect(arrNew, 0, arr.length-1, 0);
+		System.out.println("Solution: " + sol);
+		
 	}
 
-	public void sort(int arr[], int low, int high) {
+	private int quickSelect(int[] arrNew, int i, int j, int k) {
+		int pivot = find(arrNew, i, j);
+		if (k>=0) {
+			if (k == pivot) {
+				return arrNew[pivot];
+			} else if (k >= pivot) {
+				return quickSelect(arrNew, pivot+1, j, k-pivot+1);
+			} else {
+				return quickSelect(arrNew, i, pivot-1, k);
+			}
+		}
+		return -1;
+	}
 
+	public void sort(int[] arr, int low, int high) {
 		if (high > low) {
-			int partition = partition(arr, 0, high);
-			sort(arr, low, partition - 1);
-			sort(arr, partition + 1, high);
+			int pivot = find(arr, low, high);
+			sort(arr, low, pivot-1);
+			sort(arr, pivot+1, high);
 		}
 	}
-
-	private int partition(int[] arr, int low, int high) {
+	
+	public int find(int[] arr, int low, int high) {
 		int pivot = arr[high];
-		int i = (low - 1);
-
-		for (int j = low; j < high; j++) {
+		int i = (low-1);
+		for (int j= low; j<high; j++) {
 			if (arr[j] <= pivot) {
 				i++;
 				swap(arr, i, j);
 			}
 		}
-		swap(arr, (i + 1), high);
-		return (i + 1);
+		swap(arr, i+1, high);
+		return (i+1);
 	}
-
-	private void swap(int[] arr2, int i, int j) {
+	
+	public void swap(int[] arr, int i, int j) {
 		int temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
-
-	private int quickSelect(int[] arr, int k) {
-		int low = 0;
-		int high = arr.length - 1;
-
-		if (k < 0 || k > arr.length)
-			return -1;
-
-		while (high > low) {
-			int partition = partition(arr, low, high);
-
-			if (partition > k) {
-				high = partition-1;
-			} else if (partition < k) {
-				low = partition+1;
-			}else{
-				return k;
-			}
-
-		}
-		return -1;
-	}
-
-	public static void main(String[] args) {
-		QuickSort qs = new QuickSort();
-		qs.printArr();
-
-		//qs.sort(qs.arr, 0, qs.arr.length - 1);
-		//qs.printArr();
-
-		int k = 3;
-		int sol = qs.quickSelect(qs.arr, k);
-		System.out.println("SOL " + sol);
-	}
-
 }
