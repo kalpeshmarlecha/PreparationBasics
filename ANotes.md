@@ -29,6 +29,23 @@ https://docs.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
 https://github.com/RestCheatSheet/api-cheat-sheet#api-design-cheat-sheet
 https://phauer.com/2015/restful-api-design-best-practices/
 
+**Reading**
+
+Tips
+https://leetcode.com/discuss/interview-experience/687776/nda-facebook-e5-menlo-park-jun-2020-offer
+
+DP:
+https://leetcode.com/discuss/general-discussion/491522/dynamic-programming-questions-thread
+
+
+Lambdas In Action 
+Video: https://learning.oreilly.com/videos/java-8-in/9781617291999VE/9781617291999VE-Urma_c12s02?autoplay=false
+Codebase - Github: 
+https://github.com/java8/Java8InAction/tree/master/src/main/java/lambdasinaction
+
+API Design Methodology
+https://learning.oreilly.com/videos/api-design-methodology/9781491919224/9781491919224-video209493?autoplay=false
+
 
 
 ** Java 8 **
@@ -127,7 +144,22 @@ Kalpesh 3 shareholders: 2304995335
 Notification Has Bank and ID Individual : 2264441340
 Business : has Add_Dir, Id, Photo - Invoker Resposne - 1370806432
 
-
-
 Email Testing Id with PRE_CHECK and KYC_CHECK: 1403936684, 2308281415, 2308218844, 2306331935
 Downgraded user: 2308217830,
+
+
+**Books Link**
+
+https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
+
+https://www.safaribooksonline.com/topics/
+
+
+https://www.safaribooksonline.com/topics/design-patterns?active=--software-development--design-patterns
+https://www.safaribooksonline.com/library/view/java-design-patterns/9781484218020/9781484218013_Ch05.xhtml
+
+Building MicroServices
+https://www.safaribooksonline.com/library/view/building-microservices/9781491950340/copyright-page01.html
+
+REST API basic introduction:
+https://www.youtube.com/watch?v=AK6TulIASgQ
