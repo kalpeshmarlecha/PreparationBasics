@@ -295,3 +295,52 @@ KnowYourCustomerRisk_V1:KnowYourCustomerRisk_V1_BUILD_20191021-141613,
 The above build has implementation for POST Restriction emails
 
 
+**Raw negotiation notes**
+Jeff Orac
+
+In any case, just say no. You're not obligated to provide anything to them. Be "above" this level of petty nickel and diming. "I'm not necessarily looking for a signing bonus of a specific amount to offset some lost options, I'm trying to give you an idea of the financial calculus going on in my head so that you can make me an attractive offer"
+
+Say you don't feel comfortable giving out screenshots of your financial accounts.
+
+
+Blind: 330 is top of ic3
+Feb 23
+
+2. Always act as if you are very happy in your current job and you are NOT desperately looking for a change.
+My market value is higher than what is offered to me.
+I don’t want to be at loss, by accepting 
+Whats the salary band for this position.
+Tell them that ultimately choosing a job is not an easy decision because it impacts your life so you can't take it lightly.
+
+Please let me know if the comp is sounds right.
+Base 180k
+Rsu 8000 numbers ~ 320k over 4 years
+Joining: 10k
+NO CASH BONUSES AT YEAR END. I was told oracle doesn’t do annual cash bonuses instead they give rsus. Is that true?!
+
+Don’t become emotional. Always be polite and appreciative, even when things might get heated or tense. When asking for more money, rejecting an offer, or disagreeing with your recruiter, you need to remain polite. 
+Deferring is one way to keep calm and collected, and let the emotions subside so that cooler heads can prevail later.. For example, if a recruiter asks if you would accept an amount that you find offensive, just pause. Breathe. Then say “I will have to think about that, is it alright if I get back to you on it tomorrow?”
+
+Always be enthusiastic about the opportunity at hand, the company, and the team. Maybe you might be displeased by the offer, but limit that displeasure to the offer details. Show that you are willing to play ball, that you are serious about the job offer, and that only the compensation is holding you back from accepting. 
+
+I know XYZ is a very competitive company, and can definitely try to get this working.
+Always have a human connection with the recruiter.
+Jeff, if you really see, I am not making any good progress by accepting this offer, I am taking a bigger risk for just a few percent raise.
+However, I am sure YOU can work something out.
+Silicon Valley is super expensive, “I really want to buy a house within the next year; what can we do to improve the salary?” 
+I would definitely want to keep interviewing otherwise, I am happy where I am currently at.
+I know that you guys are looking for someone to build out your Android team. I believe I bring a lot of experience leading a team of Android developers and I’m confident that I’ll be able to bring your mobile offerings up to parity with your competitors.
+
+“That makes sense. Unfortunately I can’t commit to signing yet; I’m not yet at the stage where I can make a final decision. Like I told you before, this weekend I’m going to sit down with my family and talk things over with them. Choosing the company I’m going to spend the next few years at is a commitment I take really seriously. So I want to be sure I’m making a well-considered decision.
+
+This deadline also lets you defer your decision while still improving offers. Your narrative should basically be “I want to see the strongest offer your company can muster. Then I will go into my cave, meditate for 10 days, and when I emerge I will have decided in my heart which company to join.” This gives you enormous power to avoid any on-the-spot decision points or premature promises.
+
+
+When you write this type of email or make this type of call, here’s what you want to get across:
+* 		you’re really excited about their company and they are your number one choice
+* 		however, you have another offer that you need to make a decision on
+* 		you need to make this decision by x date
+* 		you’d like to know how much information they can give you on your candidacy and next steps
+* 		(that’s pretty much it!)
+* 
+https://www.youtube.com/watch?v=q0KGYwNbf-0&ab_channel=Cl%C3%A9mentMihailescu
