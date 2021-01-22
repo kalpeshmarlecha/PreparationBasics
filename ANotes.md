@@ -229,3 +229,69 @@ Here are some problems that impressed me. Good luck and have fun.
 
 
 I was asking you what I want and you constantly ignored it and diverted from the main topic
+
+**Corticon**
+Commands used for Corticon and KycRiskRtr
+
+Compile : mvn clean install -P rules-compile
+
+Package : mvn clean install -P rulepackage
+
+Maestro Dashboard: http://www.opera.qa.ebay.com/operaweb/maestrodashboard
+All the logs would be available in this dashboard
+
+Pre. Restriction User: 1386155960 — CORPORATION
+Build Number: KnowYourCustomerRisk_V1_BUILD_20191007-185432 — Enable Germany Only
+
+
+
+Post Restriction User: 1386179820 — CORPORATION
+Build Number: KnowYourCustomerRisk_V1_BUILD_20191014-172523 — Enable Post Restriction Only
+
+
+Maestro Metadata:
+LookUpHost.sql
+select * from rm_maestro_metadata where scope = '40' and rownum < 10
+
+
+Set Mock on machine :
+PaymentAccountInfoDataConfigBean
+http://lvskycriskrtr-4nrtf-tess0075.lvs02.dev.ebayc3.com:8080/admin/v3console/UpdateConfigCategoryXml?id=com.ebay.rm.maestro2.services.paymentprocessoraccountgateway.PaymentAccountInfoDataConfigBean&PAYMENT_ACCOUNT_MOCK_JSON={"paymentAccountId":"1388664673","ownerId":"1388664673","paymentProcessor":null,"accountStatus":"ACTIVE","payoutStatus":"INACTIVE","payoutAccountRefId":"payoutAccountRefId","paymentProcessorAccounts":null,"externalAccountActions":[{"action":"INACTIVATE_ACCOUNT","executionDate":1572336000000,"reason":null}],"verifications":null}
+
+Set it for Account and Accounts
+
+Mock Account: {"paymentAccountId":"1386155960","ownerId":"1386155960","paymentProcessor":null,"accountStatus":"ACTIVE","payoutStatus":"INACTIVE","payoutAccountRefId":"payoutAccountRefId","paymentProcessorAccounts":null,"externalAccountActions":[{"action":"INACTIVATE_ACCOUNT","executionDate": 1572422400000,"reason":null}],"verifications":null}
+
+Mock Accounts:
+{"paymentAccounts":[{"paymentAccountId":"1386155960","ownerId":"1386155960","paymentProcessor":null,"accountStatus":"ACTIVE","payoutStatus":"INACTIVE","payoutAccountRefId":"payoutAccountRefId","paymentProcessorAccounts":null,"externalAccountActions":[{"action":"INACTIVATE_ACCOUNT","executionDate": 1572422400000,"reason":null}],"verifications":null}]}
+
+Payload :
+Generic Produced Response:200 | producerEndPoint: http://lvskycriskrtr-4nrtf-tess0075.lvs02.dev.ebayc3.com:8080/admin/v3console/BESGenericProducer | Host:userrisk13host | refId:1388664673 | payload:userId=1388664673|payAccActionType=INACTIVATE_ACCOUNT|payAccActionExecutionDate=2019-10-29T01:00:00.000-07:00|nextFlowEvalCheckPoint=PreRR2|nextFlowEvalDate=2019-10-09T01:00:00.000-07:00
+
+
+- [x] Queries : 
+Send Email: 
+SELECT * FROM MAESTRO_RTR_XCTR_WLD_13 
+WHERE (((DECISION_TYPE = 40) AND (EXECUTOR_TYPE = 113)) AND (USER_ID = 1388664673))
+
+Publish Event: 
+SELECT * FROM MAESTRO_RTR_XCTR_WLD_13 
+WHERE (((DECISION_TYPE = 40) AND (EXECUTOR_TYPE = 107)) AND (USER_ID = 1388664673))
+
+Failed Test Cases reference:
+6,39,42,45,46,49,50,53,54,57,58,61,62,65,66,69,70,73,74,80,81
+Email: https://wiki.vip.corp.ebay.com/pages/viewpage.action?pageId=142120853
+
+https://wiki.vip.corp.ebay.com/display/RISKMGMT/Corticon+Rules+Compiler+Plugin
+
+UserRiskNNHost
+maestro_core_dcn_info_NN 
+- Response blob, 
+- 
+
+
+Can push to production 
+KnowYourCustomerRisk_V1:KnowYourCustomerRisk_V1_BUILD_20191021-141613, 
+The above build has implementation for POST Restriction emails
+
+
