@@ -163,3 +163,69 @@ https://www.safaribooksonline.com/library/view/building-microservices/9781491950
 
 REST API basic introduction:
 https://www.youtube.com/watch?v=AK6TulIASgQ
+
+**Questions to Study**
+Questions to study
+
+System Design 
+https://tianpan.co/hacking-the-software-engineer-interview
+Template: https://leetcode.com/discuss/career/229177/My-System-Design-Template
+https://cheatsheet.dennyzhang.com/cheatsheet-systemdesign-a4
+
+
+
+Facebook
+Some Offer from FAANGS: https://www.teamblind.com/post/Sharing-my-offers-evaluate-Fb-GoogleMs-and-Appl-current-SDE2-mxLAL8vY
+https://www.teamblind.com/post/Facebook-E5-comp-LqcANqu1
+
+https://www.hiredintech.com/classrooms/system-design/lesson/61
+https://leetcode.com/discuss/interview-question/124616/Merge-two-interval-lists
+
+
+Coding Problems: https://leetcode.com/discuss/general-discussion/675445/facebook-interview-experiences-all-combined-from-lc-till-date-07-jun-2020
+
+https://leetcode.com/list/xyvbjku7/
+https://github.com/nits2010/DataStructureAlgo/tree/master/Java/companyWise/facebook
+https://github.com/nits2010/DataStructureAlgo/blob/master/Java/companyWise/facebook/MaximumValueByPlacingPlusMulOperator.java
+https://www.facebookrecruiting.com/portal/interview_prep_hub
+
+
+https://www.facebook.com/careers/life/preparing-for-your-software-engineering-interview-at-facebook
+https://www.geeksforgeeks.org/sum-nodes-maximum-depth-binary-tree/?ref=rp
+https://leetcode.com/problems/minimum-window-substring/
+https://leetcode.com/problems/subarray-sum-equals-k/
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
+Sudoku
+https://leetcode.com/discuss/interview-question/338948/Facebook-or-Onsite-or-Schedule-of-Tasks
+Peeking Iterator : https://leetcode.com/problems/peeking-iterator/discuss/72558/Concise-Java-Solution
+Sorted Iterator: https://leetcode.com/discuss/interview-question/124849/Facebook-or-Sorted-Iterator Refer to the last JAVA code
+https://www.geeksforgeeks.org/facebook-interview-questions/
+
+Amazon
+https://leetcode.com/discuss/interview-question/344650/Amazon-Online-Assessment-Questions
+
+
+Similar questions:
+https://leetcode.com/problems/decode-ways/discuss/30358/Java-clean-DP-solution-with-explanation
+62. Unique Paths
+70. Climbing Stairs
+509. Fibonacci Number
+
+Affirm
+https://leetcode.com/discuss/interview-experience/761171/affirm-senior-swe-july-2020-reject
+https://no1assignmenthelp.com/answers/affirm-coding-challenge-balance-the-loan-books-in-python-or-java-programming/
+
+Reading Papers
+https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf
+
+Stack Questions
+For some more similar problem, I suggest 828. Unique Letter String 891. Sum of Subsequence Widths
+
+More Good Stack Problems
+
+Here are some problems that impressed me. Good luck and have fun.
+
+1130. Minimum Cost Tree From Leaf Values 907. Sum of Subarray Minimums 901. Online Stock Span 856. Score of Parentheses 503. Next Greater Element II 496. Next Greater Element I 84. Largest Rectangle in Histogram 42. Trapping Rain Water
+
+
+I was asking you what I want and you constantly ignored it and diverted from the main topic
