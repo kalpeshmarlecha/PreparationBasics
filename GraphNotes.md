@@ -1,0 +1,1 @@
+1. Number of Provinces [Problem](https://leetcode.com/problems/number-of-provinces/) -> [Solution](https://leetcode.com/problems/number-of-provinces/solutions/5319167/dfs-and-bfs/) (Is Graph Connected ? BFS / DFS)
